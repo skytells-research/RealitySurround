@@ -1,7 +1,3 @@
-Here’s the updated and correctly formatted `README.md` file:
-
----
-
 # Reality Surround Framework
 
 Reality Surround by Skytells, Inc. is a cutting-edge framework that seamlessly integrates haptic feedback with audio playback to deliver dynamic, immersive experiences on iOS. Using Core Haptics, Reality Surround analyzes audio signals in real-time, adjusting haptic intensity and sharpness to synchronize with music, videos, or live audio. Compatible with both Swift and Objective-C, this framework is designed for developers seeking to elevate user engagement with responsive, tactile feedback.
