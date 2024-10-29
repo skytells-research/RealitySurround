@@ -18,32 +18,32 @@ Reality Surround calculates haptic feedback intensity and sharpness based on the
 
 ### Haptic Intensity and Sharpness Calculation
 
-The dynamic haptic feedback intensity \( I(t) \) and sharpness \( S_h(t) \) at any time `t` are derived from the audio signal amplitude \( S(t) \):
+The dynamic haptic feedback intensity ( $I(t)$ ) and sharpness ( $S_h(t)$ ) at any time $t$ are derived from the audio signal amplitude ( $S(t)$ ):
 
 1. **Intensity Calculation**:
    
-   ![I(t) = \alpha \cdot \max\left(0, S(t)\right)](https://latex.codecogs.com/png.latex?I(t)%20%3D%20%5Calpha%20%5Ccdot%20%5Cmax%5Cleft(0%2C%20S(t)%5Cright))
+   $$I(t) = \alpha\ *\ max(0, S(t))$$
 
    where:
-   - ![I(t)](https://latex.codecogs.com/png.latex?I(t)) is the intensity of haptic feedback at time `t`.
-   - ![S(t)](https://latex.codecogs.com/png.latex?S(t)) is the sampled amplitude of the audio signal at time `t`.
-   - ![\alpha](https://latex.codecogs.com/png.latex?%5Calpha) is a scaling constant that normalizes `S(t)` within a range suitable for haptic feedback, typically between 0 and 1.
+   - $I(t)$: is the intensity of haptic feedback at time $t$.
+   - $S(t)$: is the sampled amplitude of the audio signal at time $t$.
+   - $\alpha$: is a scaling constant that normalizes $S(t)$ within a range suitable for haptic feedback, typically between 0 and 1.
 
 2. **Sharpness Calculation**:
    
-   ![S_h(t) = \beta \cdot \frac{I(t)}{2}](https://latex.codecogs.com/png.latex?S_h(t)%20%3D%20%5Cbeta%20%5Ccdot%20%5Cfrac%7BI(t)%7D%7B2%7D)
+   $$S_h(t) = \beta\ \cdot\ \frac{I(t)}{2}$$
 
    where:
-   - ![S_h(t)](https://latex.codecogs.com/png.latex?S_h(t)) is the sharpness parameter for haptic feedback at time `t`.
-   - ![\beta](https://latex.codecogs.com/png.latex?%5Cbeta) adjusts the sharpness sensitivity to align with feedback intensity.
+   - $S_h(t)$: is the sharpness parameter for haptic feedback at time $t$.
+   - $\beta$: adjusts the sharpness sensitivity to align with feedback intensity.
 
 ### Example
 
-If the sampled audio signal \( S(t) \) at a given time \( t \) is 0.8, with \( \alpha = 1.0 \) and \( \beta = 0.6 \), then:
+If the sampled audio signal ( $S(t)$ ) at a given time ( $t$ ) is $0.8$, with ( $\alpha = 1.0$ ) and ( $\beta = 0.6$ ), then:
 
-![I(t) = 1.0 \cdot \max(0, 0.8) = 0.8](https://latex.codecogs.com/png.latex?I(t)%20%3D%201.0%20%5Ccdot%20%5Cmax(0%2C%200.8)%20%3D%200.8)
+* $I(t) = 1.0 \cdot \max(0, 0.8) = 0.8$
 
-![S_h(t) = 0.6 \cdot \frac{0.8}{2} = 0.24](https://latex.codecogs.com/png.latex?S_h(t)%20%3D%200.6%20%5Ccdot%20%5Cfrac%7B0.8%7D%7B2%7D%20%3D%200.24)
+* $S_h(t) = 0.6 \cdot \frac{0.8}{2} = 0.24$
 
 This results in a haptic feedback intensity of 0.8 and a sharpness of 0.24, delivering haptic feedback proportional to the audio’s perceived loudness.
 
