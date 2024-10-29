@@ -1,0 +1,7 @@
+theme: jekyll-theme-minimal
+title: Reality Surround Framework
+description: Reality Surround by Skytells, Inc. is a cutting-edge framework that seamlessly integrates haptic feedback with audio playback to deliver dynamic, immersive experiences on iOS. Using Core Haptics, Reality Surround analyzes audio signals in real-time, adjusting haptic intensity and sharpness to synchronize with music, videos, or live audio. Compatible with both Swift and Objective-C, this framework is designed for developers seeking to elevate user engagement with responsive, tactile feedback.
+
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
